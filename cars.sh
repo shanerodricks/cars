@@ -2,8 +2,8 @@
 # cars.sh
 # Shane Rodricks
 
-number = 1
-while [ "$number" -eq "1"]
+number=1
+while [ "$number" -eq "1" ]
 do
 	echo "Type the number 1 to enter a new car"
 	echo "Type the number 2 to display the list of cars"
@@ -17,9 +17,12 @@ do
 		read make
 		echo "please enter the model"
 		read model
-		result = "$year:$make:$model"
-		echo "$result" >> my_old_cars
+		result="$year:$make:$model"
+		echo "$result" >> my_old_carsl;;
 		"2")
-		sort my_old_cars;
-		
+		sort my_old_cars;;
+		"3")
+		echo "Goodbye"
+		number=-1;;
+	esac	
 done
